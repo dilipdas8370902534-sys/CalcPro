@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             isNewOp = true;
         });
 
-        // Copy & Paste (Smart Feature)
+        // Copy & Paste
         findViewById(R.id.btnCopy).setOnClickListener(v -> {
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("CalcResult", tvDisplay.getText().toString());
