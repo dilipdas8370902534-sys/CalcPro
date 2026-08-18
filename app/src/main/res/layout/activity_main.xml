@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="12dp"
     android:background="@color/light_gray">
 
     <!-- Display -->
     <EditText
         android:id="@+id/tvDisplay"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="90dp"
         android:background="@color/white"
         android:gravity="end|center_vertical"
         android:padding="16dp"
@@ -31,50 +32,49 @@
         android:textSize="14sp"
         android:text="History: " />
 
-    <!-- Button Grid for QuickCalc & SmartCalc Features -->
+    <!-- Button Grid -->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:columnCount="4"
-        android:rowCount="6"
-        android:alignmentMode="alignMargins">
+        android:rowCount="6">
 
-        <!-- Row 1: Clear, Copy, Paste, Sci Mode -->
-        <Button android:id="@+id/btnClear" android:text="C" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnCopy" android:text="Copy" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnPaste" android:text="Paste" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnDiv" android:text="/" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <!-- Row 1 -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnClear" android:text="C" android:textColor="@color/white" app:backgroundTint="@color/orange" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnCopy" android:text="Copy" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnPaste" android:text="Paste" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnDiv" android:text="/" android:textColor="@color/white" app:backgroundTint="@color/purple_500" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
 
-        <!-- Row 2: Scientific & Basic -->
-        <Button android:id="@+id/btnSin" android:text="sin" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnCos" android:text="cos" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnTan" android:text="tan" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnMul" android:text="*" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <!-- Row 2 -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSin" android:text="sin" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnCos" android:text="cos" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnTan" android:text="tan" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnMul" android:text="*" android:textColor="@color/white" app:backgroundTint="@color/purple_500" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
 
-        <!-- Row 3: Numbers & Basic -->
-        <Button android:id="@+id/btn7" android:text="7" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btn8" android:text="8" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btn9" android:text="9" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnSub" android:text="-" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <!-- Row 3 -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn7" android:text="7" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn8" android:text="8" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn9" android:text="9" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSub" android:text="-" android:textColor="@color/white" app:backgroundTint="@color/purple_500" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
 
         <!-- Row 4 -->
-        <Button android:id="@+id/btn4" android:text="4" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btn5" android:text="5" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btn6" android:text="6" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnAdd" android:text="+" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn4" android:text="4" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn5" android:text="5" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn6" android:text="6" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAdd" android:text="+" android:textColor="@color/white" app:backgroundTint="@color/purple_500" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
 
         <!-- Row 5 -->
-        <Button android:id="@+id/btn1" android:text="1" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btn2" android:text="2" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btn3" android:text="3" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnSqrt" android:text="√" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn1" android:text="1" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn2" android:text="2" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn3" android:text="3" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSqrt" android:text="√" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
 
         <!-- Row 6 -->
-        <Button android:id="@+id/btn0" android:text="0" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnPercent" android:text="%" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnLog" android:text="log" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
-        <Button android:id="@+id/btnEqual" android:text="=" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn0" android:text="0" android:textColor="@color/black" app:backgroundTint="@color/white" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnPercent" android:text="%" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnLog" android:text="log" android:textColor="@color/black" app:backgroundTint="@color/btn_bg" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnEqual" android:text="=" android:textColor="@color/white" app:backgroundTint="@color/purple_700" android:layout_margin="2dp" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
 
     </GridLayout>
 
